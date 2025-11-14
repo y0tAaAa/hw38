@@ -1,9 +1,13 @@
 import './Button.css'
 
-export default function Button({ children, onClick }) {
+export default function Button({ text, children, type = 'button', onClick }) {
   return (
-    <button onClick={onClick} className="btn">
-      {children}
+    <button 
+      type={type}
+      onClick={onClick} 
+      className="btn"
+    >
+      {text || children}
     </button>
   )
 }
